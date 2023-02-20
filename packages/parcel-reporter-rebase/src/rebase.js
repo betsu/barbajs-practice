@@ -6,7 +6,7 @@ const process = require("process");
 const production = process.env.NODE_ENV == "production";
 const packageJson = require(path.join(process.cwd(), "package.json"));
 const target = process.env.npm_lifecycle_script
-	.match(/(?<=--target "*)[a-z-_]*|(?<=build:)[a-z]*/g)
+	.match(/(?<=--target "*)[a-z-_]*|(?<=build:)[a-z:]*/g)
 	.pop();
 const root = target ? packageJson.targets[target].distDir : null;
 

@@ -7,9 +7,9 @@
 			"context": "browser",
 			"outputFormat": "esmodule"
 		},
-		"build": {
+		"build-css": {
 			"publicUrl": "./",
-			"distDir": "./public",
+			"distDir": "./public/barba-css",
 			"sourceMap": false,
 			"scopeHoist": true,
 			"context": "browser",
@@ -18,7 +18,7 @@
 	},
 	"scripts": {
 		"dev": "parcel \"src/**/*.html\" --no-cache --target dev",
-		"build": "parcel build \"src/**/*.html\" --target build"
+		"build:css": "rimraf public/barba-css && parcel build \"src/**/*.html\" --target build-css"
 	},
 	"devDependencies": {
 		"@barba/core": "^2.9.7",
@@ -28,6 +28,7 @@
 		"parcel": "^2.8.3",
 		"parcel-namer-rewrite": "^2.0.0-rc.3",
 		"parcel-reporter-clean-dist": "^1.0.4",
+		"rimraf": "^4.1.2",
 		"sharp": "^0.31.3"
 	},
 	"workspaces": [
@@ -41,7 +42,7 @@
 		"hashing": "always",
 		"rules": {
 			"(.*\\\\)*(.*).css": "css/$2{-hash}.css",
-			"(.*\\\\)*(.*).(jpg|jpeg|gif|png|svg)": "asset/$2.$3",
+			"(.*\\\\)*(.*).(jpg|jpeg|gif|png|svg)": "assets/$2.$3",
 			"(.*\\\\)*(.*).js": "js/$2{-hash}.js"
 		}
 	}
