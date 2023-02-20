@@ -1,0 +1,49 @@
+{
+	"name": "barba practice",
+	"browserslist": "> 0.5%, last 2 versions, not dead",
+	"targets": {
+		"dev": {
+			"publicUrl": "/",
+			"context": "browser",
+			"outputFormat": "esmodule"
+		},
+		"build": {
+			"publicUrl": "./",
+			"distDir": "./public",
+			"sourceMap": false,
+			"scopeHoist": true,
+			"context": "browser",
+			"outputFormat": "esmodule"
+		}
+	},
+	"scripts": {
+		"dev": "parcel \"src/**/*.html\" --no-cache --target dev",
+		"build": "parcel build \"src/**/*.html\" --target build"
+	},
+	"devDependencies": {
+		"@barba/core": "^2.9.7",
+		"@barba/css": "^2.1.15",
+		"@mischnic/parcel-resolver-root": "^0.4.2",
+		"@parcel/transformer-sass": "^2.8.3",
+		"parcel": "^2.8.3",
+		"parcel-namer-rewrite": "^2.0.0-rc.3",
+		"parcel-reporter-clean-dist": "^1.0.4",
+		"parcel-reporter-rebase": "^1.0.0",
+		"sharp": "^0.31.3"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"@mischnic/parcel-resolver-root": {
+		"/": "./src/"
+	},
+	"parcel-namer-rewrite": {
+		"chain": "@parcel/namer-default",
+		"hashing": "always",
+		"rules": {
+			"(.*\\\\)*(.*).css": "css/$2{-hash}.css",
+			"(.*\\\\)*(.*).(jpg|jpeg|gif|png|svg)": "asset/$2.$3",
+			"(.*\\\\)*(.*).js": "js/$2{-hash}.js"
+		}
+	}
+}

@@ -1,0 +1,88 @@
+.list-leave-active,
+.list-enter-active {
+	transition: all 300ms linear;
+}
+
+.list-leave-active,
+.list-enter-active {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.list-leave-active {
+	z-index: 1;
+}
+
+// main
+.list-leave-active main {
+	transition: opacity 90ms cubic-bezier(0.4, 0, 1, 1),
+		transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-leave-to main {
+	opacity: 0;
+	transform: translateX(-30px);
+}
+
+.list-enter-active main {
+	transition: opacity 210ms cubic-bezier(0, 0, 0.2, 1) 90ms,
+		transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-enter main {
+	opacity: 0;
+	transform: translateX(30px);
+}
+
+.list-enter-to main {
+	opacity: 1;
+}
+
+// .main-header
+.list-leave-active .main-header-text,
+.list-enter-active .main-header-text {
+	transition: transform 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01);
+}
+
+.list-leave .main-header-text {
+	transform: translateX(0);
+}
+
+.list-leave-to .main-header-text {
+	transform: translateX(-37px);
+}
+
+.list-enter .main-header-text {
+	transform: translateX(37px);
+}
+
+.list-enter-to .main-header-text {
+	transform: translateX(0);
+}
+
+// .back-icon
+.list-leave-active .back-icon {
+	transition: opacity 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01);
+}
+
+.list-leave .back-icon {
+	opacity: 1;
+}
+
+.list-leave-to .back-icon {
+	opacity: 0;
+}
+
+// .gallery
+.list-leave-active.bannerTransition > img {
+	transition: transform 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01),
+		width 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01),
+		height 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01);
+}
+
+.list-leave-to.bannerTransition > img {
+	width: var(--banner-width-to);
+	height: var(--banner-height-to);
+	transform: translate(var(--banner-translateX), var(--banner-translateY));
+}

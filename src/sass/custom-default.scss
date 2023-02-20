@@ -1,0 +1,22 @@
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+}
+
+.customDefault-leave,
+.customDefault-enter {
+	pointer-events: none;
+}
+
+// main
+.customDefault-enter main {
+	opacity: 0;
+}
+
+// gallery
+.customDefault-enter .galleryTrigger,
+.customDefault-leave .galleryTrigger,
+.customDefault-leave .bannerImg {
+	opacity: 0;
+}

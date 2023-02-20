@@ -1,0 +1,21 @@
+# 根目錄
+root = true
+
+# 匹配所有檔案型別
+[*]
+# 字元編碼
+charset = utf-8
+# 縮排格式
+indent_style = tab
+# 使用4個空格縮排
+indent_size = 2
+tab_width = 2
+# 換行格式
+end_of_line = lf
+# 在程式碼最後新增一行空行
+insert_final_newline = true
+# 去除行末尾多餘的空白
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false

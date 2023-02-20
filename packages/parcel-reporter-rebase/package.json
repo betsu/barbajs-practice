@@ -1,0 +1,19 @@
+{
+	"name": "parcel-reporter-rebase",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/rebase.js",
+	"engines": {
+		"parcel": "2.x"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@parcel/logger": "^2.5.0",
+		"@parcel/plugin": "^2.5.0",
+		"glob": "~8.1.0"
+	}
+}
