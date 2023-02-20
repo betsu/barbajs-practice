@@ -28,7 +28,6 @@
 		"parcel": "^2.8.3",
 		"parcel-namer-rewrite": "^2.0.0-rc.3",
 		"parcel-reporter-clean-dist": "^1.0.4",
-		"parcel-reporter-rebase": "^1.0.0",
 		"sharp": "^0.31.3"
 	},
 	"workspaces": [
