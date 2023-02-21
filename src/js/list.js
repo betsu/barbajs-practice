@@ -27,7 +27,7 @@ const toList = (url, current, next) => {
 	);
 	const { width, height, top, left } = triggerImg.getBoundingClientRect();
 	const bannerImg = current.querySelector("img");
-	const transitionImg = bannerImg.cloneNode(true);
+	const transitionImg = triggerImg.cloneNode(true);
 
 	current.style.setProperty("--banner-width-to", `${width}px`);
 	current.style.setProperty("--banner-height-to", `${height}px`);
