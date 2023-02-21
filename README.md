@@ -1,3 +1,3 @@
 # barba 練習
 
-- [barba-css](http://labs.docs.isobar.tw/snow/barba-css)
+- [barba-css](http://labs.docs.isobar.tw/snow/barba/barba-css)
