@@ -73,5 +73,15 @@ barba.js 的實作是主要是運用 [Fetch API](https://developer.mozilla.org/e
 
 ## 實作練習
 
+用 barba.js 重製 view transition 的範例
+
+**view transition**：
+[Demo](https://simple-set-demos.glitch.me/7-expanding-image-ratio/) [Source](https://glitch.com/edit/#!/simple-set-demos?path=7-expanding-image-ratio%2Fstyles.css%3A59%3A0)
+
+<figure class="video_container" style="width:60%">
+  <video controls="false" allowfullscreen="true" src="https://storage.googleapis.com/web-dev-uploads/video/CZmpGM8Eo1dFe0KNhEO9SGO8Ok23/gXiaS9IpE70fnv4kkrK5.mp4" >
+  </video>
+</figure>
+
 - [barba-css](http://labs.docs.isobar.tw/snow/barba/barba-css)
   - [心得](doc/barba-css.md)
