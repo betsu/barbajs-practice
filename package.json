@@ -25,6 +25,7 @@
 		"@barba/css": "^2.1.15",
 		"@mischnic/parcel-resolver-root": "^0.4.2",
 		"@parcel/transformer-sass": "^2.8.3",
+		"gsap": "^3.11.4",
 		"parcel": "^2.8.3",
 		"parcel-namer-rewrite": "^2.0.0-rc.3",
 		"parcel-reporter-clean-dist": "^1.0.4",

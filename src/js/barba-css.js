@@ -1,8 +1,8 @@
 import barba from "@barba/core";
 import barbaCss from "@barba/css";
-import { beforeLeave, beforeEnter, after, enter } from "./transition";
-import { gallerySetting, toList } from "./list";
-import { bannerSetting, toDetail } from "./detail";
+import { beforeLeave, beforeEnter, after, enter } from "./css/transition";
+import { gallerySetting, toList } from "./css/list";
+import { bannerSetting, toDetail } from "./css/detail";
 
 barba.use(barbaCss);
 
