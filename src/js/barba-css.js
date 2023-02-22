@@ -24,6 +24,7 @@ barba.hooks.after(({ current, next }) => {
 });
 
 barba.init({
+	preventRunning: true,
 	transitions: [
 		{
 			name: "detail",
