@@ -18,7 +18,7 @@
 	},
 	"scripts": {
 		"dev": "parcel \"src/**/*.html\" --no-cache --target dev",
-		"build:css": "rimraf public/barba-css && parcel build \"src/**/*.html\" --target build-css"
+		"build:css": "rimraf public/barba-css && parcel build \"src/barba-css/**/*.html\" --target build-css"
 	},
 	"devDependencies": {
 		"@barba/core": "^2.9.7",
