@@ -42,6 +42,7 @@
 		"chain": "@parcel/namer-default",
 		"hashing": "always",
 		"rules": {
+			"(.*\\\\)*(.*).html": "$1/$2.html",
 			"(.*\\\\)*(.*).css": "css/$2{-hash}.css",
 			"(.*\\\\)*(.*).(jpg|jpeg|gif|png|svg)": "assets/$2.$3",
 			"(.*\\\\)*(.*).js": "js/$2{-hash}.js"
