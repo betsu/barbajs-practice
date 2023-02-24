@@ -42,7 +42,7 @@
 // .main-header
 .list-leave-active .main-header-text,
 .list-enter-active .main-header-text {
-	transition: transform 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01);
+	transition: transform 250ms ease;
 }
 
 .list-leave .main-header-text {
@@ -63,7 +63,7 @@
 
 // .back-icon
 .list-leave-active .back-icon {
-	transition: opacity 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01);
+	transition: opacity 250ms ease;
 }
 
 .list-leave .back-icon {
@@ -76,9 +76,7 @@
 
 // .gallery
 .list-leave-active.bannerTransition > img {
-	transition: transform 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01),
-		width 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01),
-		height 250ms cubic-bezier(0.19, 0.07, 0.13, 1.01);
+	transition: transform 250ms ease, width 250ms ease, height 250ms ease;
 }
 
 .list-leave-to.bannerTransition > img {
