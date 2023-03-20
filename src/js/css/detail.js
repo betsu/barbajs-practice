@@ -24,12 +24,7 @@ const toDetail = (trigger, current, next) => {
 
 	current.insertAdjacentElement("afterbegin", transitionImg);
 	current.classList.add("galleryTransition");
-
-	requestAnimationFrame(() => {
-		setTimeout(() => {
-			triggerImg.classList.add("galleryTrigger");
-		}, 100);
-	});
+	triggerImg.classList.add("galleryTrigger");
 };
 
 export { toDetail, bannerSetting };

@@ -1,17 +1,9 @@
-@keyframes fade-in {
-	from {
-		opacity: 0;
-	}
-}
-
 // main
 .customDefault-enter main {
 	opacity: 0;
 }
 
-// gallery
-.customDefault-enter .galleryTrigger,
-.customDefault-leave .galleryTrigger,
-.customDefault-leave .bannerImg {
+// header
+.customDefault-enter header {
 	opacity: 0;
 }
