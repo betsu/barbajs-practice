@@ -26,23 +26,19 @@ const toList = (url, current, next) => {
 		}
 	);
 	const { width, height, top, left } = triggerImg.getBoundingClientRect();
-	const bannerImg = current.querySelector("img");
+	const headerHeight = current
+		.querySelector(".main-header")
+		.getBoundingClientRect().height;
 	const transitionImg = triggerImg.cloneNode(true);
 
 	current.style.setProperty("--banner-width-to", `${width}px`);
 	current.style.setProperty("--banner-height-to", `${height}px`);
 	current.style.setProperty("--banner-translateX", `${left}px`);
-	current.style.setProperty("--banner-translateY", `${top}px`);
+	current.style.setProperty("--banner-translateY", `${top - headerHeight}px`);
 
 	current.insertAdjacentElement("afterbegin", transitionImg);
 	current.classList.add("bannerTransition");
 	triggerImg.classList.add("galleryTrigger");
-
-	requestAnimationFrame(() => {
-		setTimeout(() => {
-			bannerImg.classList.add("bannerImg");
-		}, 100);
-	});
 };
 
 export { gallerySetting, toList };

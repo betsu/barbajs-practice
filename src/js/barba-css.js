@@ -11,13 +11,7 @@ barba.hooks.beforeLeave(({ current, next }) => {
 	beforeEnter(next.container);
 });
 
-barba.hooks.enter((data) => {
-	window.scrollTo({
-		top: 0,
-		left: 0,
-		behavior: "smooth",
-	});
-});
+barba.hooks.enter(enter);
 
 barba.hooks.after(({ current, next }) => {
 	after(current.container, next.container);

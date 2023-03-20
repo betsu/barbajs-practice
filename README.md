@@ -60,12 +60,7 @@ barba.js 的實作是主要是運用 [Fetch API](https://developer.mozilla.org/e
 
 在 2023 的農曆年前，正好手邊專案都告一段落，想說好久沒有看看網站作品來刺激一下自己，正好就看到了一個動態很滑順的網站 [pilot.auto](https://pilot.auto/)
 
-<img src="doc/pilot-auto-demo.gif" width="60%">
-
-<!-- <figure class="video_container" style="width:60%">
-  <video controls="false" allowfullscreen="true" src="doc/pilot-auto-demo.mp4" >
-  </video>
-</figure> -->
+<img src="doc/pilot-auto-demo.gif" width="60%"><br>
 
 身為一個前端工程師，當然就是要用 devtools 查看，到底是用了甚麼神奇的套件做到這個效果的，就找到了 barba.js 這個神奇的東西 😊
 
@@ -79,7 +74,7 @@ barba.js 的實作是主要是運用 [Fetch API](https://developer.mozilla.org/e
 
 <img src="doc/view-transition.gif" width="60%">
 
-- [barba-css](http://labs.docs.isobar.tw/snow/barba/barba-css)
-  - 心得
+- [barba-css](https://betsu.github.io/barbajs-practice/barba-css/)
+  - [筆記](doc/barba-css.md)
 - barba-gsap
-  - 心得
+  - 筆記
