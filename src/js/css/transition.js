@@ -10,14 +10,15 @@ const after = (current, next) => {
 	requestAnimationFrame(() => {
 		current.classList.remove("customDefault-leave");
 		next.classList.remove("customDefault-enter");
-		document
-			.querySelector(".bannerImg", ".galleryTrigger")
-			?.classList.remove("bannerImg", "galleryTrigger");
 	});
 };
 
 const enter = (data) => {
-	window.scrollTo(0, 0);
+	window.scrollTo({
+		top: 0,
+		left: 0,
+		behavior: "smooth",
+	});
 };
 
 export { beforeLeave, beforeEnter, after, enter };

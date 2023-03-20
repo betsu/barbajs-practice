@@ -40,6 +40,10 @@
 }
 
 // .main-header
+.list-enter-to header {
+	opacity: 1;
+}
+
 .list-leave-active .main-header-text,
 .list-enter-active .main-header-text {
 	transition: transform 250ms ease;
@@ -83,4 +87,12 @@
 	width: var(--banner-width-to);
 	height: var(--banner-height-to);
 	transform: translate(var(--banner-translateX), var(--banner-translateY));
+}
+
+.list-leave-to .banner-img img {
+	opacity: 0;
+}
+
+.list-enter-to .galleryTrigger {
+	opacity: 0;
 }
