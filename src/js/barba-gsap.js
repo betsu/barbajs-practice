@@ -21,9 +21,7 @@ barba.init({
 			sync: true,
 			leave: ({ current, next, trigger }) =>
 				detailLeave(current.container, next.container, trigger),
-			enter: ({ next }) => {
-				detailEnter(next.container);
-			},
+			enter: ({ next }) => detailEnter(next.container),
 			after({ next }) {
 				next.container.classList.remove("detailEnter");
 			},
@@ -36,9 +34,7 @@ barba.init({
 			sync: true,
 			leave: ({ current, next }) =>
 				listLeave(current.container, next.container, current.url),
-			enter: ({ next }) => {
-				listEnter(next.container);
-			},
+			enter: ({ next }) => listEnter(next.container),
 		},
 	],
 });
