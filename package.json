@@ -14,11 +14,20 @@
 			"scopeHoist": true,
 			"context": "browser",
 			"outputFormat": "esmodule"
+		},
+		"build-gsap": {
+			"publicUrl": "./",
+			"distDir": "./public/barba-gsap",
+			"sourceMap": false,
+			"scopeHoist": true,
+			"context": "browser",
+			"outputFormat": "esmodule"
 		}
 	},
 	"scripts": {
 		"dev": "parcel \"src/**/*.html\" --no-cache --target dev",
-		"build:css": "rimraf public/barba-css && parcel build \"src/barba-css/**/*.html\" --target build-css"
+		"build:css": "rimraf public/barba-css && parcel build \"src/barba-css/**/*.html\" --target build-css",
+		"build:gsap": "rimraf public/barba-gsap && parcel build \"src/barba-gsap/**/*.html\" --target build-gsap"
 	},
 	"devDependencies": {
 		"@barba/core": "^2.9.7",
