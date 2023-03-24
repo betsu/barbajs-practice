@@ -77,4 +77,4 @@ barba.js 的實作是主要是運用 [Fetch API](https://developer.mozilla.org/e
 - [barba-css](http://labs.docs.isobar.tw/snow/barba/barba-css)
   - [筆記](doc/barba-css.md)
 - [barba-gsap](http://labs.docs.isobar.tw/snow/barba/barba-gsap)
-  - 筆記
+  - [筆記](doc/barba-gsap.md)
