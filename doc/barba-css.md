@@ -220,7 +220,7 @@ barba.init({
 ## 設定轉場動畫
 
 📄 **css 檔案**  
-主要設定檔 → [barba-style.scss](../src/sass/barba-css.scss)  
+主要設定檔 → [barba-css.scss](../src/sass/barba-css.scss)  
 詳細頁 → [detail.scss](../src/sass/detail.scss)  
 列表頁 → [list.scss](../src/sass/list.scss)
 
@@ -242,9 +242,11 @@ _view transition 前往列表頁 `.main-header-text` 轉場設定_
 
 #### 轉換為 css transition
 
-- ease：`ease`
-- duration：`0.25s`
-- transform：view transition 的原始定位點和 barba 的做法不同。先來看看進退場的版面變化為何。
+| prop      | value                                                                           |
+| --------- | ------------------------------------------------------------------------------- |
+| ease      | `ease`                                                                          |
+| duration  | `250ms`                                                                         |
+| transform | view transition 的原始定位點和 barba 的做法不同。先來看看進退場的版面變化為何。 |
 
 <img src="main-header-css.png" width="400">
 
@@ -252,9 +254,11 @@ _header 區塊的變化及版面相關資訊_
 
 從上圖獲得的資訊可以計算出 `.main-header-text` 的移動距離為： 31px（`.back-icon` 寬度） + 4.8px（`column-gap` 空間） = 35.8px。但實際測試 37px 效果會更好。
 
-- ease：`ease`
-- duration：`0.25s`
-- transform： `translateX(37px)`、`translateX(-37px)`
+| prop      | value                                   |
+| --------- | --------------------------------------- |
+| ease      | `ease`                                  |
+| duration  | `250ms`                                 |
+| transform | `translateX(37px)`、`translateX(-37px)` |
 
 **detail.scss**
 
@@ -308,9 +312,11 @@ view transition 沒有特別的設定，但是以動畫統一性來看，`ease` 
 
 #### 轉換為 css transition
 
-- ease：`ease`
-- duration：`0.25s`
-- opacity： `0`、`1`
+| prop     | value    |
+| -------- | -------- |
+| ease     | `ease`   |
+| duration | `250ms`  |
+| opacity  | `0`、`1` |
 
 **detail.scss**
 
@@ -358,22 +364,28 @@ _進退場轉場設定_
 
 **淡出**
 
-- ease：`cubic-bezier(0.4, 0, 1, 1)`
-- duration：`90ms`
-- opacity：`0`、`1`
+| prop     | value                        |
+| -------- | ---------------------------- |
+| ease     | `cubic-bezier(0.4, 0, 1, 1)` |
+| duration | `90ms`                       |
+| opacity  | `0`、`1`                     |
 
 **淡入**
 
-- ease：`cubic-bezier(0, 0, 0.2, 1)`
-- duration：`210ms`
-- delay：`90ms`
-- opacity：`0`、`1`
+| prop     | value                        |
+| -------- | ---------------------------- |
+| ease     | `cubic-bezier(0, 0, 0.2, 1)` |
+| duration | `210ms`                      |
+| delay    | `90ms`                       |
+| opacity  | `0`、`1`                     |
 
 **位移**
 
-- ease：`cubic-bezier(0.4, 0, 0.2, 1)`
-- duration：`300ms`
-- transform：`translateX(30px)`、`translateX(-30px)`
+| prop      | value                                   |
+| --------- | --------------------------------------- |
+| ease      | `cubic-bezier(0.4, 0, 0.2, 1)`          |
+| duration  | `300ms`                                 |
+| transform | `translateX(30px)`、`translateX(-30px)` |
 
 **detail.scss**
 
@@ -453,33 +465,41 @@ _view transition `.banner-img` 進退場圖片尺寸設定_
 
 **位移**
 
-- ease：`ease`
-- duration：`0.25s`
-- transform：view transition 的原始定位點和 barba 的做法不同，來看看版面變化為何。
+| prop      | value                                                                 |
+| --------- | --------------------------------------------------------------------- |
+| ease      | `ease`                                                                |
+| duration  | `250ms`                                                               |
+| transform | view transition 的原始定位點和 barba 的做法不同，來看看版面變化為何。 |
 
 <img src="view-transition-img-transform.png" width="600">
 
 _版面相關資訊_
 
-由於是 RWD 的版面，除了 header 的高度是固定的之外，其他的間距都需要用 js 抓取。實作的部分先設定 css variable 再用 js 塞值。
+由於是 RWD 的版面，間距都需要用 js 抓取。實作的部分先設定 css variable 再用 js 塞值。
 
 **前往詳細頁的位移**
 
-- ease：`ease`
-- duration：`0.25s`
-- transform：`translate(var(--gallery-translateX), var(--gallery-translateY))`
+| prop      | value                                                             |
+| --------- | ----------------------------------------------------------------- |
+| ease      | `ease`                                                            |
+| duration  | `250ms`                                                           |
+| transform | `translate(var(--gallery-translateX), var(--gallery-translateY))` |
 
 **前往列表頁的位移**
 
-- ease：`ease`
-- duration：`0.25s`
-- transform：`translate(var(--banner-translateX), var(--banner-translateY))`
+| prop      | value                                                           |
+| --------- | --------------------------------------------------------------- |
+| ease      | `ease`                                                          |
+| duration  | `250ms`                                                         |
+| transform | `translate(var(--banner-translateX), var(--banner-translateY))` |
 
 **圖片尺寸縮放**
 
-- ease：`ease`
-- duration：`0.25s`
-- size：view transition 看起來是利用 `object-fit` 去做漸變，但是在 [Animatable CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties) 當中並沒有列出 `object-fit`，所以還是以 `width` 及 `height` 做為轉場的設定。
+| prop     | value                                                                                                                                                                                                                                         |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ease     | `ease`                                                                                                                                                                                                                                        |
+| duration | `250ms`                                                                                                                                                                                                                                       |
+| size     | view transition 看起來是利用 `object-fit` 去做漸變，但是在 [Animatable CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties) 當中並沒有列出 `object-fit`，所以還是以 `width` 及 `height` 做為轉場的設定。 |
 
 <img src="view-transition-img-size.png" width="600">
 
@@ -489,17 +509,21 @@ _圖片尺寸相關資訊_
 
 **前往詳細頁圖片尺寸縮放**
 
-- ease：`ease`
-- duration：`0.25s`
-- width： `100%`
-- height： `var(--gallery-height-to)`
+| prop     | value                      |
+| -------- | -------------------------- |
+| ease     | `ease`                     |
+| duration | `0.25s`                    |
+| width    | `100%`                     |
+| height   | `var(--gallery-height-to)` |
 
 **前往列表頁圖片尺寸縮放**
 
-- ease：`ease`
-- duration：`0.25s`
-- width：`var(--banner-width-to)`
-- height：`var(--banner-height-to)`
+| prop     | value                     |
+| -------- | ------------------------- |
+| ease     | `ease`                    |
+| duration | `0.25s`                   |
+| width    | `var(--banner-width-to)`  |
+| height   | `var(--banner-height-to)` |
 
 **detail.scss**
 
@@ -568,7 +592,7 @@ _圖片尺寸相關資訊_
 列表頁 → [list.js](../src/js/css/list.js)
 
 📄 **css 檔案**  
-主要設定檔 → [barba-style.scss](../src/sass/barba-css.scss)  
+主要設定檔 → [barba-css.scss](../src/sass/barba-css.scss)  
 詳細頁 → [detail.scss](../src/sass/detail.scss)  
 列表頁 → [list.scss](../src/sass/list.scss)  
 跨頁圖片預設樣式 → [gallery-img.scss](../src/sass/gallery-img.scss)
@@ -922,7 +946,7 @@ barba.init({
 global hooks → [transition.js](../src/js/css/transition.js)
 
 📄 **css 檔案**  
-主要設定檔 → [barba-style.scss](../src/sass/barba-css.scss)  
+主要設定檔 → [barba-css.scss](../src/sass/barba-css.scss)  
 詳細頁 → [detail.scss](../src/sass/detail.scss)  
 列表頁 → [list.scss](../src/sass/list.scss)  
 跨頁圖片預設樣式 → [gallery-img.scss](../src/sass/gallery-img.scss)  
@@ -1100,7 +1124,7 @@ barba.hooks.after(({ current, next }) => {
 優化到這邊基本上是差不多了，不過還有一些小細節可以再調整。
 
 - 跨頁圖片轉場時將原本的底圖隱藏，轉場後再出現
-- 轉場時將 scroll 位置拉回頂端
+- 轉場進場時將 scroll 位置拉回頂端
 
 ### 跨頁圖片轉場時原本的底圖隱藏，轉場後再出現
 
@@ -1217,9 +1241,9 @@ const toList = (url, current, next) => {
 }
 ```
 
-### 轉場時將 scroll 位置拉回頂端
+### 轉場進場時將 scroll 位置拉回頂端
 
-因為是進到下一頁的行為，所以希望新內容的轉場是可以在頁面頂端的位置來進行。而轉場的 hooks 是 `enter() {}`，但是使用了 CSS plugin 的話 `enter() {}` 就無法使用 callback，加上這個效果希望是所有情境都可以用到，這時候使用 global hooks 就是一個很好的選擇。
+因為是進到下一頁的行為，所以希望新內容的轉場是可以在頁面頂端的位置來進行。而轉場進場的 hooks 是 `enter() {}`，但是使用了 CSS plugin 的話 `enter() {}` 就無法使用 callback，加上這個效果希望是所有情境都可以用到，這時候使用 global hooks 就是一個很好的選擇。
 
 在 transition.js 新增 `enter()`。
 
