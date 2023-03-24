@@ -2,12 +2,12 @@ import barba from "@barba/core";
 import { detailEnter, detailLeave } from "./gsap/detail";
 import { listEnter, listLeave } from "./gsap/list";
 
-barba.hooks.enter(() => {
-	window.scrollTo({
-		top: 0,
-		left: 0,
-		behavior: "smooth",
-	});
+if (history.scrollRestoration) {
+	history.scrollRestoration = "manual";
+}
+
+barba.hooks.beforeLeave(() => {
+	window.scrollTo(0, barba.history.previous.scroll.y);
 });
 
 barba.init({
@@ -35,6 +35,9 @@ barba.init({
 			leave: ({ current, next }) =>
 				listLeave(current.container, next.container, current.url),
 			enter: ({ next }) => listEnter(next.container),
+			after({ next }) {
+				next.container.classList.remove("listEnter");
+			},
 		},
 	],
 });

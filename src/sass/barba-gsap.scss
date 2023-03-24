@@ -4,6 +4,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 }
 
 .listLeave {
@@ -15,6 +16,11 @@
 }
 
 .listLeave .banner-img img {
+	opacity: 0;
+}
+
+.detailLeave .triggerImg,
+.listEnter .triggerImg {
 	opacity: 0;
 }
 

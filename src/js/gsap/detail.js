@@ -21,8 +21,10 @@ const detailLeave = (current, next, trigger) => {
 	);
 	const tl = gsap.timeline();
 
+	triggerImg.classList.add("triggerImg");
 	transitionImg.classList.add("transitionImg");
 	current.insertAdjacentElement("afterbegin", transitionImg);
+	current.classList.add("detailLeave");
 
 	tl.to(
 		content,
@@ -64,13 +66,13 @@ const detailLeave = (current, next, trigger) => {
 	return tl;
 };
 
-const detailEnter = (container) => {
-	const content = container.querySelector("main");
-	const headerTitle = container.querySelector(".main-header-text");
-	const headerIcon = container.querySelector(".back-icon");
+const detailEnter = (next) => {
+	const content = next.querySelector("main");
+	const headerTitle = next.querySelector(".main-header-text");
+	const headerIcon = next.querySelector(".back-icon");
 	const tl = gsap.timeline();
 
-	container.classList.add("detailEnter");
+	next.classList.add("detailEnter");
 
 	tl.from(
 		content,

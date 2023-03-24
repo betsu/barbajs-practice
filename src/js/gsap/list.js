@@ -1,3 +1,4 @@
+import barba from "@barba/core";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
 
@@ -32,6 +33,7 @@ const listLeave = (current, next, url) => {
 	);
 	const tl = gsap.timeline();
 
+	triggerImg.classList.add("triggerImg");
 	transitionImg.classList.add("transitionImg");
 	current.insertAdjacentElement("afterbegin", transitionImg);
 	current.classList.add("listLeave");
@@ -75,7 +77,7 @@ const listLeave = (current, next, url) => {
 		.fromTo(
 			transitionImg,
 			{
-				width: triggerImgData.width,
+				width: "100%",
 				height: triggerImgData.height,
 				x: 0,
 				y: triggerImgData.top,
@@ -94,9 +96,11 @@ const listLeave = (current, next, url) => {
 	return tl;
 };
 
-const listEnter = (container) => {
-	const content = container.querySelector("main");
+const listEnter = (next) => {
+	const content = next.querySelector("main");
 	const tl = gsap.timeline();
+
+	next.classList.add("listEnter");
 
 	tl.from(
 		content,
