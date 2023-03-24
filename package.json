@@ -25,7 +25,7 @@
 		}
 	},
 	"scripts": {
-		"dev": "parcel \"src/**/*.html\" --no-cache --target dev",
+		"dev": "rimraf dist && parcel \"src/**/*.html\" --no-cache --target dev",
 		"build:css": "rimraf public/barba-css && parcel build \"src/barba-css/**/*.html\" --target build-css",
 		"build:gsap": "rimraf public/barba-gsap && parcel build \"src/barba-gsap/**/*.html\" --target build-gsap"
 	},
